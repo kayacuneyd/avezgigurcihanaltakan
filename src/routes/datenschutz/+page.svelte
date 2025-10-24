@@ -7,7 +7,7 @@
 </script>
 
 <SEO
-    title="Datenschutz | Av. Ezgi G. Altakan"
+    title="Datenschutz"
     description={page?.excerpt || 'Informationen zum Datenschutz.'}
     image={page?.featured_image}
 /

@@ -10,7 +10,7 @@
 			<div>
 				<h3 class="text-lg font-bold mb-4">Av. Ezgi G. Altakan</h3>
 				<p class="text-gray-400 mb-4">
-					Profesyonel hukuki danışmanlık ve temsil hizmetleri.
+					Professionelle Rechtsberatung und Vertretung.
 				</p>
 			</div>
 

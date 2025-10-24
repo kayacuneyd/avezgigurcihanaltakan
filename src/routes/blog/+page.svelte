@@ -6,7 +6,7 @@
 	export let data: PageData;
 </script>
 
-<SEO title="Blog" description="Hukuk alanındaki güncel gelişmeler ve bilgilendirici yazılar." />
+<SEO title="Blog" description="Aktuelle Entwicklungen im Rechtsbereich und informative Beiträge." />
 
 <div class="py-16">
 	<div class="container-custom">
@@ -30,7 +30,7 @@
 								{@html post.excerpt}
 							</p>
 							<a href="/blog/{post.slug}" class="text-primary-600 font-medium hover:text-primary-700">
-								Devamını oku →
+								Weiterlesen →
 							</a>
 						</div>
 					</article>
@@ -38,7 +38,7 @@
 			</div>
 		{:else}
 			<div class="text-center py-12">
-				<p class="text-gray-600">Henüz blog yazısı yok.</p>
+				<p class="text-gray-600">Es sind noch keine Blogbeiträge vorhanden.</p>
 			</div>
 		{/if}
 	</div>

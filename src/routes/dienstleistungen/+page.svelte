@@ -7,7 +7,7 @@
 </script>
 
 <SEO
-    title="Dienstleistungen | Av. Ezgi G. Altakan"
+    title="Dienstleistungen"
     description={page?.excerpt || 'Informationen zu meinen juristischen Dienstleistungen.'}
     image={page?.featured_image}
 /

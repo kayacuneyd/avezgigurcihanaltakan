@@ -5,7 +5,7 @@
 	export let data: PageData;
 </script>
 
-<SEO title="Hizmetler" description="Hukuk alanlarındaki hizmetlerimiz hakkında bilgi edinin." />
+<SEO title="Dienstleistungen" description="Informationen zu meinen juristischen Dienstleistungen." />
 
 <div class="py-16">
 	<div class="container-custom">

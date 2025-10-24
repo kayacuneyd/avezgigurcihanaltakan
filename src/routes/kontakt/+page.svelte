@@ -6,7 +6,7 @@
     const settings = data.siteSettings;
 </script>
 
-<SEO title="Kontakt | Av. Ezgi G. Altakan" description="Kontaktieren Sie uns für rechtliche Beratung." />
+<SEO title="Kontakt" description="Kontaktieren Sie uns für rechtliche Beratung." />
 
 <div class="py-16">
     <div class="container-custom">
