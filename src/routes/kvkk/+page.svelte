@@ -12,7 +12,7 @@
 		<h1 class="text-4xl font-bold mb-8">KVKK Aydınlatma Metni</h1>
 		
 		{#if data.page}
-			<div class="wp-content">
+			<div class="wp-content prose prose-lg">
 				{@html data.page.content}
 			</div>
 		{:else}

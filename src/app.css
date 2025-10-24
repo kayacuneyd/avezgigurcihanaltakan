@@ -45,9 +45,13 @@
 		@apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors;
 	}
 
-	/* WordPress content styling */
+	/* WordPress content styling
+	   Note: `prose` is provided by Tailwind Typography plugin and
+	   cannot be used with `@apply` because it generates complex
+	   component styles. Add the prose classes in your markup
+	   (e.g. `<div class="wp-content prose prose-lg">`). */
 	.wp-content {
-		@apply prose prose-lg max-w-none;
+		@apply max-w-none;
 	}
 
 	.wp-content h2 {

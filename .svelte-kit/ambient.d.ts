@@ -117,6 +117,7 @@ declare module '$env/static/private' {
 	export const RUBY_ROOT: string;
 	export const SDKMAN_PLATFORM: string;
 	export const TERM_PROGRAM: string;
+	export const npm_config_loglevel: string;
 	export const npm_lifecycle_script: string;
 	export const SHELL: string;
 	export const GOPATH: string;
@@ -131,6 +132,7 @@ declare module '$env/static/private' {
 	export const CONDA_DIR: string;
 	export const DEBIAN_FLAVOR: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+	export const GIT_PAGER: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
 	export const JAVA_HOME: string;
@@ -277,6 +279,7 @@ declare module '$env/dynamic/private' {
 		RUBY_ROOT: string;
 		SDKMAN_PLATFORM: string;
 		TERM_PROGRAM: string;
+		npm_config_loglevel: string;
 		npm_lifecycle_script: string;
 		SHELL: string;
 		GOPATH: string;
@@ -291,6 +294,7 @@ declare module '$env/dynamic/private' {
 		CONDA_DIR: string;
 		DEBIAN_FLAVOR: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
+		GIT_PAGER: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;
 		JAVA_HOME: string;

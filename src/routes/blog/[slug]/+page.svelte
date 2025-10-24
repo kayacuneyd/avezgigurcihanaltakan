@@ -28,7 +28,7 @@
 			</div>
 		</header>
 
-		<div class="wp-content">
+		<div class="wp-content prose prose-lg">
 			{@html post.content}
 		</div>
 

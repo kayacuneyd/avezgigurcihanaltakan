@@ -17,7 +17,7 @@
 		{#if page}
 			<h1 class="text-4xl font-bold mb-8">{page.title}</h1>
 			
-			<div class="wp-content">
+			<div class="wp-content prose prose-lg">
 				{@html page.content}
 			</div>
 		{:else}
