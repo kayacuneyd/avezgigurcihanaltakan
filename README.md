@@ -41,25 +41,25 @@ src/
 ├── lib/
 │   ├── wp.ts           # WordPress API client
 │   ├── types.ts        # TypeScript type definitions
-│   └── utils.ts        # Yardımcı fonksiyonlar
+│   └── utils.ts        # Helper functions
 │
 ├── components/
-│   ├── Header.svelte   # Navigasyon
-│   ├── Footer.svelte   # Footer
+│   ├── Header.svelte   # Navigation (German labels)
+│   ├── Footer.svelte   # Footer (German labels)
 │   └── SEO.svelte      # SEO meta tags
 │
 ├── routes/
-│   ├── +layout.svelte          # Ana layout
-│   ├── +layout.server.ts       # Global data
-│   ├── +page.svelte            # Ana sayfa
-│   ├── hakkimda/               # Hakkımda
-│   ├── hizmetler/              # Hizmetler
-│   ├── blog/                   # Blog listesi
-│   │   └── [slug]/             # Tek blog yazısı
-│   ├── iletisim/               # İletişim
-│   └── kvkk/                   # KVKK
+│   ├── +layout.svelte          # Main layout
+│   ├── +layout.server.ts       # Global data (loads site settings)
+│   ├── +page.svelte            # Startseite (homepage)
+│   ├── ueber-mich/             # Über mich
+│   ├── dienstleistungen/       # Dienstleistungen
+│   ├── blog/                   # Blog list
+│   │   └── [slug]/             # Single blog post
+│   ├── kontakt/                # Kontakt
+│   └── datenschutz/            # Datenschutz
 │
-├── app.html            # HTML template
+├── app.html            # HTML template (lang="de")
 └── app.css             # Global CSS
 ```
 
@@ -99,11 +99,13 @@ Yerine logo eklenebilir:
 
 ### Sayfalar Oluşturun (Pages)
 
-1. **Ana Sayfa** (slug: `homepage`)
-2. **Hakkımda** (slug: `hakkimda`)
-3. **Hizmetler** (slug: `hizmetler`)
-4. **İletişim** (slug: `iletisim`)
-5. **KVKK** (slug: `kvkk`)
+Create the following pages in WordPress and use the German slugs so the frontend can fetch localized content:
+
+1. **Startseite / Home** (slug: `homepage`)
+2. **Über mich** (slug: `ueber-mich`)
+3. **Dienstleistungen** (slug: `dienstleistungen`)
+4. **Kontakt** (slug: `kontakt`)
+5. **Datenschutz** (slug: `datenschutz`)
 
 ### Ayarları Doldurun
 

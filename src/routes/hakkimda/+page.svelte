@@ -7,7 +7,7 @@
 </script>
 
 <SEO
-	title={page?.title || 'Hakkımda'}
+	title={page?.title || 'Über Mich'}
 	description={page?.excerpt || 'Av. Ezgi G. Altakan hakkında bilgi edinin.'}
 	image={page?.featured_image}
 />

@@ -7,9 +7,7 @@
 
 <SEO
 	title="Startseite"
-	description="Professionelle Rechtsberatung und Vertretung in den Bereichen Familien-, Handels- und Strafrecht."
-/
->
+	description="Professionelle Rechtsberatung und Vertretung in den Bereichen Familien-, Handels- und Strafrecht." />
 
 <!-- Hero Section -->
 <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
