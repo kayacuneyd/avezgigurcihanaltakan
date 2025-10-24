@@ -1,13 +1,9 @@
 // @ts-nocheck
-import { getPage } from '$lib/wp';
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load = async ({ fetch }: Parameters<PageServerLoad>[0]) => {
-	try {
-		const page = await getPage('hakkimda', fetch);
-		return { page };
-	} catch (error) {
-		console.error('Error loading page:', error);
-		return { page: null };
-	}
+// Redirect old Turkish route to the new German route
+export const load = async () => {
+	throw redirect(307, '/ueber-mich');
 };
+;null as any as PageServerLoad;

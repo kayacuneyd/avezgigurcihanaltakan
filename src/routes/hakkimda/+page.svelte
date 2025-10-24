@@ -20,10 +20,13 @@
 			<div class="wp-content prose prose-lg">
 				{@html page.content}
 			</div>
-		{:else}
-			<div class="text-center py-12">
-				<p class="text-gray-600">Bu sayfa henüz oluşturulmadı.</p>
+		<script lang="ts">
+			import { onMount } from 'svelte';
+		</script>
+
+		<div class="py-16">
+			<div class="container-custom text-center">
+				<h1 class="text-2xl font-bold mb-4">Bu sayfa taşındı / Seite verschoben</h1>
+				<p class="text-gray-600 mb-4">Die Seite wurde nach Deutsch übersetzt und ist jetzt unter <a href="/ueber-mich" class="text-primary-600 hover:text-primary-700">/ueber-mich</a> erreichbar.</p>
 			</div>
-		{/if}
-	</div>
-</div>
+		</div>

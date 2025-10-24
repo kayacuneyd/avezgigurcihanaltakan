@@ -4,11 +4,11 @@
 	let mobileMenuOpen = false;
 
 	const navItems = [
-		{ title: 'Ana Sayfa', href: '/' },
-		{ title: 'Hakkımda', href: '/hakkimda' },
-		{ title: 'Hizmetler', href: '/hizmetler' },
+		{ title: 'Startseite', href: '/' },
+		{ title: 'Über mich', href: '/ueber-mich' },
+		{ title: 'Dienstleistungen', href: '/dienstleistungen' },
 		{ title: 'Blog', href: '/blog' },
-		{ title: 'İletişim', href: '/iletisim' }
+		{ title: 'Kontakt', href: '/kontakt' }
 	];
 
 	function isActive(href: string): boolean {
@@ -43,8 +43,8 @@
 			</div>
 
 			<div class="hidden md:block">
-				<a href="/iletisim" class="btn-primary">
-					Randevu Al
+				<a href="/kontakt" class="btn-primary">
+					Termin vereinbaren
 				</a>
 			</div>
 

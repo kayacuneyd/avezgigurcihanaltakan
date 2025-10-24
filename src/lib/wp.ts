@@ -67,6 +67,9 @@ export interface SiteSettings {
 /**
  * Fetch a single page by slug
  */
+// Note: site page slugs are now German (e.g. 'ueber-mich', 'dienstleistungen', 'kontakt', 'datenschutz').
+// The `slug` parameter itself is unchanged in the function signature — callers should pass the
+// localized slug when requesting pages.
 export async function getPage(slug: string, fetchFn?: typeof fetch): Promise<WPPage> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();

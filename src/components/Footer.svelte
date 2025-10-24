@@ -15,7 +15,7 @@
 			</div>
 
 			<div>
-				<h3 class="text-lg font-bold mb-4">İletişim</h3>
+				<h3 class="text-lg font-bold mb-4">Kontakt</h3>
 				{#if siteSettings}
 					<ul class="space-y-2 text-gray-400">
 						<li>{siteSettings.phone}</li>
@@ -26,21 +26,21 @@
 			</div>
 
 			<div>
-				<h3 class="text-lg font-bold mb-4">Hızlı Bağlantılar</h3>
+				<h3 class="text-lg font-bold mb-4">Schnelllinks</h3>
 				<ul class="space-y-2">
-					<li><a href="/" class="text-gray-400 hover:text-white">Ana Sayfa</a></li>
-					<li><a href="/hakkimda" class="text-gray-400 hover:text-white">Hakkımda</a></li>
-					<li><a href="/hizmetler" class="text-gray-400 hover:text-white">Hizmetler</a></li>
+					<li><a href="/" class="text-gray-400 hover:text-white">Startseite</a></li>
+					<li><a href="/ueber-mich" class="text-gray-400 hover:text-white">Über mich</a></li>
+					<li><a href="/dienstleistungen" class="text-gray-400 hover:text-white">Dienstleistungen</a></li>
 					<li><a href="/blog" class="text-gray-400 hover:text-white">Blog</a></li>
-					<li><a href="/iletisim" class="text-gray-400 hover:text-white">İletişim</a></li>
+					<li><a href="/kontakt" class="text-gray-400 hover:text-white">Kontakt</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-			<p>&copy; {currentYear} Ezgi G. Altakan. Tüm hakları saklıdır.</p>
+			<p>&copy; {currentYear} Ezgi G. Altakan. Alle Rechte vorbehalten.</p>
 			<div class="mt-2">
-				<a href="/kvkk" class="hover:text-white">KVKK</a>
+				<a href="/datenschutz" class="hover:text-white">Datenschutz</a>
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,7 @@
-import { getPage } from '$lib/wp';
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ fetch }) => {
-	try {
-		const page = await getPage('hizmetler', fetch);
-		return { page };
-	} catch (error) {
-		return { page: null };
-	}
+// Redirect old Turkish route to the new German route
+export const load: PageServerLoad = async () => {
+	throw redirect(307, '/dienstleistungen');
 };

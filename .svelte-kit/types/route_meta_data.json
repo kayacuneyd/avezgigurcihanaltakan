@@ -12,6 +12,14 @@
 		"src/routes/blog/[slug]/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/datenschutz": [
+		"src/routes/datenschutz/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/dienstleistungen": [
+		"src/routes/dienstleistungen/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
 	"/hakkimda": [
 		"src/routes/hakkimda/+page.server.ts",
 		"src/routes/+layout.server.ts"
@@ -24,8 +32,16 @@
 		"src/routes/iletisim/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
+	"/kontakt": [
+		"src/routes/kontakt/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
 	"/kvkk": [
 		"src/routes/kvkk/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/ueber-mich": [
+		"src/routes/ueber-mich/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	]
 }

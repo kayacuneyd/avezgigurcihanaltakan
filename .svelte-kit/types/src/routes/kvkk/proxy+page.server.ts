@@ -1,12 +1,9 @@
 // @ts-nocheck
-import { getPage } from '$lib/wp';
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load = async ({ fetch }: Parameters<PageServerLoad>[0]) => {
-	try {
-		const page = await getPage('kvkk', fetch);
-		return { page };
-	} catch (error) {
-		return { page: null };
-	}
+// Redirect old KVKK route to new German Datenschutz route
+export const load = async () => {
+	throw redirect(307, '/datenschutz');
 };
+;null as any as PageServerLoad;

@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/hakkimda/+page.svelte";
+export { default as component } from "../../../../src/routes/datenschutz/+page.svelte";
