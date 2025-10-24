@@ -1,0 +1,31 @@
+{
+	"/": [
+		"src/routes/+page.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/blog": [
+		"src/routes/blog/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/blog/[slug]": [
+		"src/routes/blog/[slug]/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/hakkimda": [
+		"src/routes/hakkimda/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/hizmetler": [
+		"src/routes/hizmetler/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/iletisim": [
+		"src/routes/iletisim/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/kvkk": [
+		"src/routes/kvkk/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	]
+}

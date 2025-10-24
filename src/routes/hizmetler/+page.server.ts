@@ -1,9 +1,9 @@
 import { getPage } from '$lib/wp';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ fetch }) => {
 	try {
-		const page = await getPage('hizmetler');
+		const page = await getPage('hizmetler', fetch);
 		return { page };
 	} catch (error) {
 		return { page: null };
