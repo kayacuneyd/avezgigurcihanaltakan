@@ -10,8 +10,7 @@
     title="Datenschutz"
     description={page?.excerpt || 'Informationen zum Datenschutz.'}
     image={page?.featured_image}
-/
->
+/>
 
 <div class="py-16">
     <div class="container-custom max-w-4xl">

@@ -7,6 +7,23 @@ function requireApiUrl() {
 	return PUBLIC_WP_API_URL;
 }
 
+async function doFetchWithRetries(url: string, f: typeof fetch, attempts = 2, delayMs = 400): Promise<Response> {
+	let lastErr: any;
+	for (let i = 0; i < attempts; i++) {
+		try {
+			return await f(url);
+		} catch (err: any) {
+			lastErr = err;
+			// small backoff before retrying
+			if (i < attempts - 1) {
+				await new Promise((r) => setTimeout(r, delayMs));
+				delayMs *= 2;
+			}
+		}
+	}
+	throw lastErr;
+}
+
 export interface WPPage {
 	id: number;
 	title: string;
@@ -73,12 +90,18 @@ export interface SiteSettings {
 export async function getPage(slug: string, fetchFn?: typeof fetch): Promise<WPPage> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();
-	const response = await f(`${api}/custom/v1/pages/${slug}`);
-    
-	if (!response.ok) {
-		throw new Error(`Failed to fetch page: ${slug}`);
+	const url = `${api}/custom/v1/pages/${slug}`;
+	let response: Response;
+	try {
+		response = await doFetchWithRetries(url, f);
+	} catch (err: any) {
+		throw new Error(`Network error fetching page '${slug}' from ${url}: ${err?.message || err}`, { cause: err });
 	}
-    
+
+	if (!response.ok) {
+		throw new Error(`Failed to fetch page: ${slug} (status ${response.status})`);
+	}
+
 	return response.json();
 }
 
@@ -88,14 +111,18 @@ export async function getPage(slug: string, fetchFn?: typeof fetch): Promise<WPP
 export async function getPosts(page = 1, perPage = 10, fetchFn?: typeof fetch): Promise<WPPostsResponse> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();
-	const response = await f(
-		`${api}/custom/v1/posts?page=${page}&per_page=${perPage}`
-	);
-    
-	if (!response.ok) {
-		throw new Error('Failed to fetch posts');
+	const url = `${api}/custom/v1/posts?page=${page}&per_page=${perPage}`;
+	let response: Response;
+	try {
+		response = await doFetchWithRetries(url, f);
+	} catch (err: any) {
+		throw new Error(`Network error fetching posts from ${url}: ${err?.message || err}`, { cause: err });
 	}
-    
+
+	if (!response.ok) {
+		throw new Error(`Failed to fetch posts (status ${response.status})`);
+	}
+
 	return response.json();
 }
 
@@ -105,12 +132,18 @@ export async function getPosts(page = 1, perPage = 10, fetchFn?: typeof fetch): 
 export async function getPost(slug: string, fetchFn?: typeof fetch): Promise<WPPost> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();
-	const response = await f(`${api}/custom/v1/posts/${slug}`);
-    
-	if (!response.ok) {
-		throw new Error(`Failed to fetch post: ${slug}`);
+	const url = `${api}/custom/v1/posts/${slug}`;
+	let response: Response;
+	try {
+		response = await doFetchWithRetries(url, f);
+	} catch (err: any) {
+		throw new Error(`Network error fetching post '${slug}' from ${url}: ${err?.message || err}`, { cause: err });
 	}
-    
+
+	if (!response.ok) {
+		throw new Error(`Failed to fetch post: ${slug} (status ${response.status})`);
+	}
+
 	const data = await response.json();
 	return data;
 }
@@ -121,12 +154,18 @@ export async function getPost(slug: string, fetchFn?: typeof fetch): Promise<WPP
 export async function getSiteSettings(fetchFn?: typeof fetch): Promise<SiteSettings> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();
-	const response = await f(`${api}/custom/v1/site-settings`);
-    
-	if (!response.ok) {
-		throw new Error('Failed to fetch site settings');
+	const url = `${api}/custom/v1/site-settings`;
+	let response: Response;
+	try {
+		response = await doFetchWithRetries(url, f);
+	} catch (err: any) {
+		throw new Error(`Network error fetching site settings from ${url}: ${err?.message || err}`, { cause: err });
 	}
-    
+
+	if (!response.ok) {
+		throw new Error(`Failed to fetch site settings (status ${response.status})`);
+	}
+
 	return response.json();
 }
 
@@ -136,13 +175,17 @@ export async function getSiteSettings(fetchFn?: typeof fetch): Promise<SiteSetti
 export async function searchPosts(query: string, perPage = 10, fetchFn?: typeof fetch): Promise<WPPostsResponse> {
 	const f = fetchFn ?? fetch;
 	const api = requireApiUrl();
-	const response = await f(
-		`${api}/custom/v1/posts?search=${encodeURIComponent(query)}&per_page=${perPage}`
-	);
-    
-	if (!response.ok) {
-		throw new Error('Failed to search posts');
+	const url = `${api}/custom/v1/posts?search=${encodeURIComponent(query)}&per_page=${perPage}`;
+	let response: Response;
+	try {
+		response = await doFetchWithRetries(url, f);
+	} catch (err: any) {
+		throw new Error(`Network error searching posts at ${url}: ${err?.message || err}`, { cause: err });
 	}
-    
+
+	if (!response.ok) {
+		throw new Error(`Failed to search posts (status ${response.status})`);
+	}
+
 	return response.json();
 }

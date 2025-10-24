@@ -3,6 +3,10 @@
 	
 	let mobileMenuOpen = false;
 
+	// reactive currentPath to ensure active state works after hard refresh
+	let currentPath: string = '';
+	$: currentPath = $page.url.pathname;
+
 	const navItems = [
 		{ title: 'Startseite', href: '/' },
 		{ title: 'Über mich', href: '/ueber-mich' },
@@ -13,9 +17,10 @@
 
 	function isActive(href: string): boolean {
 		if (href === '/') {
-			return $page.url.pathname === '/';
+			return currentPath === '/';
 		}
-		return $page.url.pathname.startsWith(href);
+		// Exact match or sub-route (e.g. /blog and /blog/my-post)
+		return currentPath === href || currentPath.startsWith(href + '/');
 	}
 </script>
 

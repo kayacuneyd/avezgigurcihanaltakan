@@ -23,7 +23,7 @@
 				<a href="/kontakt" class="btn-primary bg-white text-primary-600 hover:bg-gray-100">
 					Termin vereinbaren
 				</a>
-				<a href="/ueber-mich" class="btn-secondary text-white border-white hover:bg-primary-700">
+				<a href="/ueber-mich" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-medium rounded-md hover:bg-white hover:text-primary-600 transition-colors">
 					Über mich
 				</a>
 			</div>

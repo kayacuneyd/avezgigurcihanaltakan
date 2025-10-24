@@ -10,8 +10,7 @@
     title="Dienstleistungen"
     description={page?.excerpt || 'Informationen zu meinen juristischen Dienstleistungen.'}
     image={page?.featured_image}
-/
->
+/>
 
 <div class="py-16">
     <div class="container-custom">

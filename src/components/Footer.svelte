@@ -39,6 +39,9 @@
 
 		<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
 			<p>&copy; {currentYear} Ezgi G. Altakan. Alle Rechte vorbehalten.</p>
+			<p class="mt-2">
+				Entwickelt von <a href="https://kayacuneyt.com" target="_blank" rel="noopener noreferrer" class="text-primary-400 hover:text-primary-300 transition-colors">Cüneyt Kaya</a>
+			</p>
 			<div class="mt-2">
 				<a href="/datenschutz" class="hover:text-white">Datenschutz</a>
 			</div>

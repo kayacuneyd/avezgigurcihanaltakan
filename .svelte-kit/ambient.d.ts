@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const RESEND_API_KEY: string;
 	export const GITHUB_TOKEN: string;
 	export const DOCKER_BUILDKIT: string;
 	export const LESSOPEN: string;
@@ -117,7 +118,6 @@ declare module '$env/static/private' {
 	export const RUBY_ROOT: string;
 	export const SDKMAN_PLATFORM: string;
 	export const TERM_PROGRAM: string;
-	export const npm_config_loglevel: string;
 	export const npm_lifecycle_script: string;
 	export const SHELL: string;
 	export const GOPATH: string;
@@ -188,6 +188,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		RESEND_API_KEY: string;
 		GITHUB_TOKEN: string;
 		DOCKER_BUILDKIT: string;
 		LESSOPEN: string;
@@ -279,7 +280,6 @@ declare module '$env/dynamic/private' {
 		RUBY_ROOT: string;
 		SDKMAN_PLATFORM: string;
 		TERM_PROGRAM: string;
-		npm_config_loglevel: string;
 		npm_lifecycle_script: string;
 		SHELL: string;
 		GOPATH: string;

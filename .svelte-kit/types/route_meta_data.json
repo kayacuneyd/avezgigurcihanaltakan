@@ -20,24 +20,8 @@
 		"src/routes/dienstleistungen/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/hakkimda": [
-		"src/routes/hakkimda/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/hizmetler": [
-		"src/routes/hizmetler/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/iletisim": [
-		"src/routes/iletisim/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
 	"/kontakt": [
 		"src/routes/kontakt/+page.server.ts",
-		"src/routes/+layout.server.ts"
-	],
-	"/kvkk": [
-		"src/routes/kvkk/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
 	"/ueber-mich": [

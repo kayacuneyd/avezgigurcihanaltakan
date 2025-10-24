@@ -10,8 +10,7 @@
     title="Über mich"
     description={page?.excerpt || 'Erfahren Sie mehr über Av. Ezgi G. Altakan.'}
     image={page?.featured_image}
-/
->
+/>
 
 <div class="py-16">
     <div class="container-custom">

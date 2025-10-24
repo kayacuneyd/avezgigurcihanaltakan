@@ -82,9 +82,7 @@ colors: {
 `src/components/Header.svelte` içinde:
 
 ```html
-<a href="/" class="text-xl font-bold">
-  Av. Ezgi G. Altakan
-</a>
+<a href="/" class="text-xl font-bold"> Av. Ezgi G. Altakan </a>
 ```
 
 Yerine logo eklenebilir:
@@ -122,6 +120,7 @@ WordPress Admin > Ayarlar > Genel
 WordPress Admin > Yazılar > Yeni Ekle
 
 Her yazıya:
+
 - Başlık
 - İçerik
 - Öne Çıkan Görsel
@@ -162,7 +161,7 @@ GET /wp-json/custom/v1/pages/{slug}
 TypeScript kullanıldığı için tüm API responseları type-safe.
 
 ```typescript
-import type { WPPost, WPPage } from '$lib/wp';
+import type { WPPost, WPPage } from "$lib/wp";
 ```
 
 ## 📞 Destek
