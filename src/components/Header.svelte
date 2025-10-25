@@ -4,7 +4,7 @@
 	let mobileMenuOpen = false;
 
 	// reactive currentPath to ensure active state works after hard refresh
-	let currentPath: string = '';
+	let currentPath = '';
 	$: currentPath = $page.url.pathname;
 
 	const navItems = [
@@ -15,12 +15,12 @@
 		{ title: 'Kontakt', href: '/kontakt' }
 	];
 
-	function isActive(href: string): boolean {
+	function isActive(href: string, pathname: string): boolean {
 		if (href === '/') {
-			return currentPath === '/';
+			return pathname === '/';
 		}
 		// Exact match or sub-route (e.g. /blog and /blog/my-post)
-		return currentPath === href || currentPath.startsWith(href + '/');
+		return pathname === href || pathname.startsWith(href + '/');
 	}
 </script>
 
@@ -37,10 +37,12 @@
 				{#each navItems as item}
 					<a
 						href={item.href}
-						class="inline-flex items-center px-1 pt-1 text-sm font-medium transition-colors
-							{isActive(item.href)
-								? 'text-primary-600 border-b-2 border-primary-600'
-								: 'text-gray-700 hover:text-primary-600'}"
+						class="inline-flex items-center px-1 pt-1 text-sm font-medium transition-colors"
+						class:text-primary-600={isActive(item.href, currentPath)}
+						class:border-b-2={isActive(item.href, currentPath)}
+						class:border-primary-600={isActive(item.href, currentPath)}
+						class:text-gray-700={!isActive(item.href, currentPath)}
+						class:hover:text-primary-600={!isActive(item.href, currentPath)}
 					>
 						{item.title}
 					</a>
@@ -79,8 +81,10 @@
 					{#each navItems as item}
 						<a
 							href={item.href}
-							class="block pl-3 pr-4 py-2 text-base font-medium
-								{isActive(item.href) ? 'text-primary-600 bg-primary-50' : 'text-gray-700'}"
+							class="block pl-3 pr-4 py-2 text-base font-medium"
+							class:text-primary-600={isActive(item.href, currentPath)}
+							class:bg-primary-50={isActive(item.href, currentPath)}
+							class:text-gray-700={!isActive(item.href, currentPath)}
 							on:click={() => (mobileMenuOpen = false)}
 						>
 							{item.title}
