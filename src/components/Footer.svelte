@@ -9,11 +9,13 @@
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<div>
 				<div class="flex items-center space-x-3 mb-4">
-					<img
-						src="/logo.svg"
-						alt="Ezgi G. Altakan Logo"
-						class="h-8 w-auto brightness-0 invert"
-					/>
+					<div class="bg-white p-2 rounded-lg">
+						<img
+							src="/logo.svg"
+							alt="Ezgi G. Altakan Logo"
+							class="h-8 w-auto"
+						/>
+					</div>
 					<h3 class="text-lg font-bold">Av. Ezgi G. Altakan</h3>
 				</div>
 				<p class="text-gray-400 mb-4 leading-relaxed">

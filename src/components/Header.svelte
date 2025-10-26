@@ -26,21 +26,21 @@
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
 	<nav class="container-custom">
-		<div class="flex justify-between items-center h-16">
+		<div class="flex justify-between items-center h-20">
 			<div class="flex-shrink-0">
 				<a href="/" class="flex items-center space-x-3">
 					<img
 						src="/logo.svg"
 						alt="Ezgi G. Altakan Logo"
-						class="h-10 w-auto"
+						class="h-14 w-auto"
 					/>
-					<span class="text-xl font-bold text-gray-900 hidden sm:inline">
+					<span class="text-xl font-bold text-gray-900 hidden lg:inline">
 						Av. Ezgi G. Altakan
 					</span>
 				</a>
 			</div>
 
-			<div class="hidden md:flex md:space-x-8">
+			<div class="hidden lg:flex lg:space-x-6">
 				{#each navItems as item}
 					<a
 						href={item.href}
@@ -56,7 +56,7 @@
 				{/each}
 			</div>
 
-			<div class="hidden md:block">
+			<div class="hidden lg:block">
 				<a
 					href="https://cal.com/avezgigurcihanaltakan/erstberatung"
 					target="_blank"
@@ -67,7 +67,7 @@
 				</a>
 			</div>
 
-			<div class="md:hidden">
+			<div class="lg:hidden">
 				<button
 					type="button"
 					class="inline-flex items-center justify-center p-2 rounded-md text-gray-700"
@@ -88,7 +88,7 @@
 		</div>
 
 		{#if mobileMenuOpen}
-			<div class="md:hidden pb-4">
+			<div class="lg:hidden pb-4">
 				<div class="pt-2 pb-3 space-y-1">
 					{#each navItems as item}
 						<a
@@ -104,16 +104,18 @@
 					{/each}
 				</div>
 
-					<div class="pt-4 pb-3 border-t border-gray-200">
+				<div class="pt-4 pb-3 border-t border-gray-200">
+					<div class="px-3">
 						<a
 							href="https://cal.com/avezgigurcihanaltakan/erstberatung"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="block w-full mx-3 btn-primary text-center"
+							class="block w-full btn-primary text-center"
 							on:click={() => (mobileMenuOpen = false)}
 						>
 							Termin vereinbaren
 						</a>
+					</div>
 				</div>
 			</div>
 		{/if}

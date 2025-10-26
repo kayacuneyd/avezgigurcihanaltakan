@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SEO from '../components/SEO.svelte';
+	import { cleanWordPressContent } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -145,7 +146,7 @@
 							</a>
 						</h3>
 						<p class="text-gray-600 mb-4 line-clamp-3">
-							{@html post.excerpt}
+							{cleanWordPressContent(post.excerpt).replace(/<[^>]*>/g, '')}
 						</p>
 						<a href="/blog/{post.slug}" class="text-primary-600 font-medium hover:text-primary-700">
 							Weiterlesen →

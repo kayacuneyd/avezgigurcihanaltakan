@@ -1,4 +1,13 @@
-# Local env
+# Environment files
 .env
-# Local env
-.env
+.env.local
+
+# Dependencies
+node_modules/
+
+# Svelte build output
+.svelte-kit/
+build/
+
+# Netlify build artifacts
+.netlify/
