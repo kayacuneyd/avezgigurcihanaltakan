@@ -11,3 +11,4 @@ build/
 
 # Netlify build artifacts
 .netlify/
+.env
