@@ -27,12 +27,14 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/blog" | "/blog/[slug]" | "/datenschutz" | "/dienstleistungen" | "/kontakt" | "/ueber-mich";
+		RouteId(): "/" | "/api" | "/api/contact" | "/blog" | "/blog/[slug]" | "/datenschutz" | "/dienstleistungen" | "/kontakt" | "/ueber-mich";
 		RouteParams(): {
 			"/blog/[slug]": { slug: string }
 		};
 		LayoutParams(): {
 			"/": { slug?: string };
+			"/api": Record<string, never>;
+			"/api/contact": Record<string, never>;
 			"/blog": { slug?: string };
 			"/blog/[slug]": { slug: string };
 			"/datenschutz": Record<string, never>;
@@ -40,7 +42,7 @@ declare module "$app/types" {
 			"/kontakt": Record<string, never>;
 			"/ueber-mich": Record<string, never>
 		};
-		Pathname(): "/" | "/blog" | "/blog/" | `/blog/${string}` & {} | `/blog/${string}/` & {} | "/datenschutz" | "/datenschutz/" | "/dienstleistungen" | "/dienstleistungen/" | "/kontakt" | "/kontakt/" | "/ueber-mich" | "/ueber-mich/";
+		Pathname(): "/" | "/api" | "/api/" | "/api/contact" | "/api/contact/" | "/blog" | "/blog/" | `/blog/${string}` & {} | `/blog/${string}/` & {} | "/datenschutz" | "/datenschutz/" | "/dienstleistungen" | "/dienstleistungen/" | "/kontakt" | "/kontakt/" | "/ueber-mich" | "/ueber-mich/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/README.md" | "/logo.svg" | "/robots.txt" | string & {};
 	}

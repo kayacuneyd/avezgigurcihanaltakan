@@ -20,7 +20,12 @@
 				Professionelle Rechtsberatung und Vertretung stehen Ihnen zur Verfügung.
 			</p>
 			<div class="flex flex-col sm:flex-row gap-4">
-				<a href="/kontakt" class="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+				<a
+					href="https://cal.com/avezgigurcihanaltakan/erstberatung"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-primary bg-white text-primary-600 hover:bg-gray-100"
+				>
 					Termin vereinbaren
 				</a>
 				<a href="/ueber-mich" class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-medium rounded-md hover:bg-white hover:text-primary-600 transition-colors">
@@ -166,7 +171,12 @@
 		<p class="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
 			Kontaktieren Sie uns jetzt, um die passende Lösung für Sie zu finden.
 		</p>
-		<a href="/kontakt" class="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+		<a
+			href="https://cal.com/avezgigurcihanaltakan/erstberatung"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="btn-primary bg-white text-primary-600 hover:bg-gray-100"
+		>
 			Termin vereinbaren
 		</a>
 	</div>

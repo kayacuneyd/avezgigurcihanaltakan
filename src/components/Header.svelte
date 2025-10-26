@@ -28,8 +28,15 @@
 	<nav class="container-custom">
 		<div class="flex justify-between items-center h-16">
 			<div class="flex-shrink-0">
-				<a href="/" class="text-xl font-bold text-gray-900">
-					Av. Ezgi G. Altakan
+				<a href="/" class="flex items-center space-x-3">
+					<img
+						src="/logo.svg"
+						alt="Ezgi G. Altakan Logo"
+						class="h-10 w-auto"
+					/>
+					<span class="text-xl font-bold text-gray-900 hidden sm:inline">
+						Av. Ezgi G. Altakan
+					</span>
 				</a>
 			</div>
 
@@ -50,7 +57,12 @@
 			</div>
 
 			<div class="hidden md:block">
-				<a href="/kontakt" class="btn-primary">
+				<a
+					href="https://cal.com/avezgigurcihanaltakan/erstberatung"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-primary"
+				>
 					Termin vereinbaren
 				</a>
 			</div>
@@ -90,6 +102,18 @@
 							{item.title}
 						</a>
 					{/each}
+				</div>
+
+					<div class="pt-4 pb-3 border-t border-gray-200">
+						<a
+							href="https://cal.com/avezgigurcihanaltakan/erstberatung"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="block w-full mx-3 btn-primary text-center"
+							on:click={() => (mobileMenuOpen = false)}
+						>
+							Termin vereinbaren
+						</a>
 				</div>
 			</div>
 		{/if}

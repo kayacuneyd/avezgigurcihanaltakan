@@ -8,9 +8,18 @@
 	<div class="container-custom py-12">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<div>
-				<h3 class="text-lg font-bold mb-4">Av. Ezgi G. Altakan</h3>
-				<p class="text-gray-400 mb-4">
-					Professionelle Rechtsberatung und Vertretung.
+				<div class="flex items-center space-x-3 mb-4">
+					<img
+						src="/logo.svg"
+						alt="Ezgi G. Altakan Logo"
+						class="h-8 w-auto brightness-0 invert"
+					/>
+					<h3 class="text-lg font-bold">Av. Ezgi G. Altakan</h3>
+				</div>
+				<p class="text-gray-400 mb-4 leading-relaxed">
+					Spezialisiert auf Familien-, Handels- und Strafrecht. Mit jahrelanger Erfahrung
+					stehe ich meinen Mandanten mit kompetenter Beratung und engagierter Vertretung
+					zur Seite.
 				</p>
 			</div>
 

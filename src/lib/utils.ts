@@ -37,3 +37,11 @@ export function slugify(text: string): string {
 		.replace(/[^\w\-]+/g, '')
 		.replace(/\-\-+/g, '-');
 }
+
+/**
+ * Generate avatar URL from UI Avatars API
+ */
+export function getAvatarUrl(name: string): string {
+	const encodedName = encodeURIComponent(name);
+	return `https://ui-avatars.com/api/?name=${encodedName}&size=200&background=0ea5e9&color=fff&bold=true`;
+}
