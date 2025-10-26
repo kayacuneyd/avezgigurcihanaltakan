@@ -1,9 +1,11 @@
 [build]
   command = "npm run build"
-  publish = ".svelte-kit/netlify"
+  publish = "build"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/render"
+  status = 200
